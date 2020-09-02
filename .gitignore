@@ -1,3 +1,2 @@
-matlab/
-crack/
-installer_input.txt
+root/usr/local/MATLAB/R2020a/licenses/*
+root/usr/local/MATLAB/R2020a/bin/*

@@ -38,18 +38,12 @@ FROM lsiobase/guacgui as build
 
 COPY ./matlab /matlab_install
 
-COPY ./crack /crack
-
 COPY ./installer_input.txt /installer_input.txt
 
 RUN chmod +x /matlab_install/install && \
 /bin/sh /matlab_install/install -inputFile /installer_input.txt && \
-cp /crack/libmwlmgrimpl.so /opt/MATLAB/bin/glnxa64/matlab_startup_plugins/lmgrimpl/ && \
-mkdir /opt/MATLAB/licenses/ && \
-cp /crack/license.lic /opt/MATLAB/licenses/ && \
 rm -rf \
     /matlab_install \
-    /crack \
     /installer_input.txt
     
 
