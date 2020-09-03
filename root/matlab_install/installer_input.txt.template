@@ -31,7 +31,7 @@
 ## Set the desired value for destinationFolder and 
 ## uncomment the line. 
 
- destinationFolder=/opt/MATLAB
+ destinationFolder=/usr/local/MATLAB/R2020a
 
 ##
 ## SPECIFY FILE INSTALLATION KEY 
