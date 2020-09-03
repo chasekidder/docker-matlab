@@ -38,13 +38,9 @@ FROM lsiobase/guacgui as build
 
 COPY ./matlab /matlab_install
 
-COPY ./installer_input.txt /installer_input.txt
-
 RUN chmod +x /matlab_install/install && \
-/bin/sh /matlab_install/install -inputFile /installer_input.txt && \
-rm -rf \
-    /matlab_install \
-    /installer_input.txt
+/bin/sh /matlab_install/install -inputFile /matlab_install/installer_input.txt && \
+rm -rf /matlab_install
     
 
 
