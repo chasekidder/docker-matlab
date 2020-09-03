@@ -10,3 +10,4 @@ This creates a docker image that can serve Matlab over rdp to a user's browser.
   - NOTE: If all components are commented out, then it will install everything your license works for.
 4. Add your "license.lic" file to "root/usr/local/MATLAB/<matlab_version>/licenses/".
 5. Build the image. This takes a long time because Matlab can be a BIG install. Base Matlab is a ~5GB image and adding Simulink and a couple toolboxes brought mine up to ~11GB
+  - Be aware that while building the image can be up to twice the finished size of the image. This is because the installation files and the installed program are temporarily in the same image effectively doubling it. This means that you will need about triple the space needed available on your hard drive while building so that the image builds fully and can then remove the install files from the image.
