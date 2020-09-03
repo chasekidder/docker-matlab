@@ -36,11 +36,11 @@ RUN \
 # INSTALL STANDALONE APPLICATION
 FROM lsiobase/guacgui as build
 
-COPY ./matlab /matlab_install
+COPY ./matlab_install_files /matlab_install_files
 
-RUN chmod +x /matlab_install/install && \
-/bin/sh /matlab_install/install -inputFile /matlab_install/installer_input.txt && \
-rm -rf /matlab_install
+RUN chmod +x /matlab_install_files/install && \
+/bin/sh /matlab_install_files/install -inputFile /matlab_install_files/installer_input.txt && \
+rm -rf /matlab_install_files
     
 
 
